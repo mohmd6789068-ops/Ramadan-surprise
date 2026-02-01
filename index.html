@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مفاجأة 🌙</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f5f5f5;
+      margin-top: 100px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 26px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>أدخل كلمة السر 🎁</h2>
+  <input type="password" id="password" placeholder="كلمة السر">
+  <br><br>
+  <button onclick="check()">دخول</button>
+
+  <div id="message">🌙 رمضان كريم 🌹</div>
+
+  <script>
+    function check() {
+      const pass = document.getElementById("password").value;
+      if (pass === "ramadan") {
+        document.getElementById("message").style.display = "block";
+      } else {
+        alert("كلمة السر غير صحيحة ❌");
+      }
+    }
+  </script>
+
+</body>
+</html>
