@@ -8,12 +8,17 @@
       margin: 0;
       height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #000;
       color: #fff;
       font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     img {
@@ -31,12 +36,21 @@
 </head>
 <body>
 
-  <!-- تأكد أن اسم الصورة صحيح -->
-  <img src="photo.png" alt="الصورة">
+<script>
+  const password = "زياد الخول"; // كلمة المرور
+  const userPassword = prompt("ادخل كلمة المرور");
 
-  <div class="caption">
-    اخويا رقم واحد يعم
-  </div>
+  if (userPassword === password) {
+    document.body.innerHTML = `
+      <div class="container">
+        <img src="photo.png" alt="الصورة">
+        <div class="caption">اخويا رقم واحد يعم</div>
+      </div>
+    `;
+  } else {
+    alert("كلمة المرور غير صحيحة");
+  }
+</script>
 
 </body>
 </html>
