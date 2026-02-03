@@ -2,6 +2,7 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقعي</title>
   <style>
     body {
@@ -13,6 +14,7 @@
       background-color: #000;
       color: #fff;
       font-family: Arial, sans-serif;
+      text-align: center;
     }
 
     .container {
@@ -22,14 +24,16 @@
     }
 
     img {
-      max-width: 80%;
-      max-height: 70%;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 15px;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
     }
 
     .caption {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
     }
   </style>
@@ -37,18 +41,21 @@
 <body>
 
 <script>
-  const password = "زياد الخول"; // كلمة المرور
+  // كلمة المرور التي طلبتها
+  const password = "زياد الخول"; 
   const userPassword = prompt("ادخل كلمة المرور");
 
   if (userPassword === password) {
     document.body.innerHTML = `
       <div class="container">
-        <img src="photo.png" alt="الصورة">
+        <img src="WhatsApp Image 2026-02-03 at 23.21.22.jpeg" alt="اخويا">
         <div class="caption">اخويا رقم واحد يعم</div>
       </div>
     `;
   } else {
     alert("كلمة المرور غير صحيحة");
+    // إعادة تحميل الصفحة في حال الخطأ
+    location.reload(); 
   }
 </script>
 
